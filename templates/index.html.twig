@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cargar Comandos{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/upload.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1>DrawingTool</h1>
+    <p>Ingrese el archivo de comandos en formato txt</P>
+
+    <form class="upload-form" action="{{ path('uploadFile') }}" method="post" enctype="multipart/form-data">
+        <label for="file">Seleccione un archivo</label>
+        <input type="file" id="file" name="file" required>
+        <div class="button-container">
+        <button type="submit">Enviar</button>
+        </div>
+        {% if error is defined %}
+        <p class="error-message">{{ error }}</p>
+        {% endif %}
+    </form>
+
+    {% if message is defined %}
+    
+    <p>{{ message }}</p>
+    <a href="{{ urlDownload }}" download>Descargar resultado</a>
+    
+    {% endif %}
+</div>    
+    
+{% endblock %}

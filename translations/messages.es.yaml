@@ -1,0 +1,6 @@
+canvasNotCreated: "El canvas no ha sido creado."
+invalidDimensions: "El ancho y el alto deben ser números positivos"
+coordinatesOut: "Las coordenadas están fuera del canvas"
+samePoints: "Los puntos de inicio y fin son el mismo"
+invalidLine: "Tipo de línea no permitida"
+pointOut: "El punto está fuera de los límites del canvas"
